@@ -1,0 +1,35 @@
+body{
+    margin: 0px;
+    background-color: #101113;
+}
+
+.container{
+    color: red;
+}
+
+.content{
+    color: white;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    font-family: 'Raleway', sans-serif;
+}
+
+button{
+    background-color: rgba(252,249,244,0.1);
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    color: white;
+    border: 1px solid #FCF9F4;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+button:hover{
+    background-color: rgba(252,249,244,0.3);
+    color: white;
+}

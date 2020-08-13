@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Raleway:wght@600&display=swap');
+
+.heroBg{
+    background: rgb(118,86,133);
+    background: linear-gradient(180deg, rgba(118,86,133,1) 0%, rgba(241,134,163,1) 50%, rgba(243,194,216,1) 80%, rgba(16,17,19,1) 95%);
+    height: 100vh;
+    color: white;
+    display: grid;
+    /* place-items: center; */
+    grid-template-columns: 1fr;
+    grid-template-rows: 20vh 1fr 1fr;
+    position: relative;
+    z-index: -3;
+
+}
+
+.mountain{
+    display: block;
+    min-width: 100vw;
+    align-self: end;
+    grid-row: -1;
+    position: relative;
+    z-index: 0;
+}
+
+.hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 80vw;
+    place-self: center;
+    grid-row: 2;
+
+}
+
+.moonWrapper{
+    grid-column: 1 / 2;
+    align-self: center;
+}
+
+.moon{
+    position: fixed;
+    left:10vw;
+    top:20vh;
+}
+
+.headline{
+    grid-column: 2 / -1;
+    padding: 10px;
+}
+
+.block{
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 10px;
+}
+
+h1{
+    margin: 0px;
+    padding: 0px;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
