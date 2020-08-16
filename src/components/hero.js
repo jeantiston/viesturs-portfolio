@@ -16,24 +16,16 @@ const Hero = () => {
                   }
                 }
             }
-            mountain: file(relativePath: {eq: "mountain.png"}) {
-                id
-                childImageSharp {
-                  fluid(quality: 100){
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
         }
     `)
 
-    console.log(data)
+    // console.log(data)
 
     return (
         <div className={heroStyles.heroBg}>
             <div className={heroStyles.hero}>
                 <div className={heroStyles.moonWrapper}>
-                    <Img className={heroStyles.moon} fluid={data.moon.childImageSharp.fluid} alt="moon"/>
+                    {/* <Img className={heroStyles.moon} fluid={data.moon.childImageSharp.fluid} alt="moon"/> */}
                 </div>
                 <div className={heroStyles.headline}>
                     <p>Hello, my name is</p>
@@ -53,7 +45,7 @@ const Hero = () => {
             <div className={heroStyles.mountain}>
                 
                 {/* <p>Hello hello hello hello</p> */}
-                    <Img fluid={data.mountain.childImageSharp.fluid} alt="mountain"/>
+                    {/* <Img fluid={data.mountain.childImageSharp.fluid} alt="mountain"/> */}
             </div>
            
             

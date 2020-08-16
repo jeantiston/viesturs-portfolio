@@ -31,18 +31,6 @@ module.exports = {
         name: 'images',
         path: `${__dirname}/src/assets/`,
       },
-    },
-    {
-      resolve: `gatsby-plugin-google-fonts-v2`,
-      options: {
-        fonts: [
-          {
-            family: 'Montserrat',
-            variable: true,
-            weights: ['300..400']
-          }
-        ]
-      }
     }
   ],
 }
