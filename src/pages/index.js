@@ -1,13 +1,13 @@
-import React, { useState } from "react"
+import React from "react"
 
 import { graphql, useStaticQuery } from "gatsby"
 import { motion } from 'framer-motion';
 import Img from "gatsby-image"
 
 import Layout from '../components/layout'
-import Nav from '../components/nav'
 import Hero from '../components/hero'
 import About from '../components/about'
+import Skills from '../components/skills'
 
 export default function Home() {
   const data = useStaticQuery(graphql`
@@ -51,7 +51,7 @@ export default function Home() {
 
   return (
   <Layout>
-    <Nav />
+    
       <motion.div animate={{ opacity: moonOpacity }} transition={{ opacity: {duration: 0.1} }}>
         <Img fixed={data.moon.childImageSharp.fixed} alt="moon" style={{
           position: "fixed",
@@ -68,6 +68,7 @@ export default function Home() {
     }} /> 
     <Hero />
     <About />
+    <Skills />
   </Layout>
   )
 }

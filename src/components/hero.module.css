@@ -1,14 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Raleway:wght@600&display=swap');
-
 .heroBg{
     background: rgb(118,86,133);
-    background: linear-gradient(180deg, rgba(118,86,133,1) 0%, rgba(118,86,133,1) 10%, rgba(241,134,163,1) 50%, rgba(243,194,216,1) 80%);
+    background: linear-gradient(180deg, rgba(118,86,133,1) 10%, rgba(241,134,163,1) 50%, rgba(243,194,216,1) 70%, rgba(16,17,19,1) 80%);
     height: 100vh;
     color: white;
     display: grid;
     /* place-items: center; */
     grid-template-columns: 1fr;
-    grid-template-rows: 20vh 1fr 1fr;
+    grid-template-rows: 5vh 1fr 1fr;
     position: relative;
     z-index: -3;
 
@@ -53,7 +51,7 @@
 .block{
     grid-column: 1 / -1;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
 }
 
 h1{

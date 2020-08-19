@@ -32,7 +32,7 @@ const Hero = () => {
                     <h1>Jean Tiston</h1>
                 </div>
                 <div className={heroStyles.block}>
-                    <p>I’m a software engineer that focuses on creating beautiful and functional websites that clearly conveys your brand</p>
+                    <p>I’m a software engineer that focus on creating beautiful and functional websites that clearly reflects your brand</p>
                 </div>
                 <div className={heroStyles.block}>
                     <button>Get In Touch</button>

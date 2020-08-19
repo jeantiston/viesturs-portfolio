@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion';
 
 import navMenu from '../assets/navmenu.svg'
 import closeMenu from '../assets/close.svg'
@@ -8,43 +9,79 @@ const Nav = () => {
     const navButton = {
         display: "flex",
         justifyContent: "flex-end",
-        position: "absolute",
-        top: "20px",
-        right: "20px"
+        alignItems: "center",
+        backgroundColor: "#765685",
+        height: "80px",
+        width: "100vw",
+        position: "relative",
+        zIndex: 2
     }
 
     const navStyle = {
-        backgroundColor: "#765685",
-        backgroundOpacity: "95%",
+        backgroundColor: "rgba(118, 86, 133, 0.9)",
+        paddingTop: "100px",
         height: "100%",
         position: "fixed",
-        zIndex: "3",
+        zIndex: "1",
         top: "5vh",
         left: 0,
         width: "100%",
         alignItems: "center",
-        display: "flex",
+        display: "none",
         justifyContent: "center",
-        alignItems: "flex-start"
+        alignItems: "flex-start",
+        overflow: "hidden"
     }
+
+    const button = {
+        paddingRight: "20px",
+        width: "40px",
+        height: "40px"
+
+    }
+
+    const closeButton = {
+        left: "324px",
+        top: "17px"
+    }
+
+
+
+    const [showNav, setShowNav] = React.useState(0)
+
+    function handleClick(cmd){
+        if( cmd === "open" ){
+            console.log(document.getElementsByTagName("nav")[0].style.display)
+            document.getElementsByTagName("nav")[0].style.display = 'flex'
+            setShowNav(1)
+            document.body.style.overflow = 'hidden'
+        }
+        else {
+            setShowNav(0)
+            document.getElementsByTagName("nav")[0].style.display = 'none'
+            document.body.style.overflow = 'auto'
+        }
+    }
+
+    
 
     return (
         <div>
-            <div style={navButton}>
-                <img src={navMenu} alt="nav menu" />
-            </div>
-            <nav style={navStyle}>
-                <div style={navButton}>
-                    <img src={closeMenu} alt="nav menu" />
-                </div>
+            <motion.nav style={navStyle} animate={{ opacity: showNav }} initial={{ opacity: 0 }} transition={{ opacity: {duration: 0.3} }}>
+
                 <ul>
-                    <li><a href="#">About</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#">Skills</a></li>
                     <li><a href="#">Projects</a></li>
                     <li><a href="#">Contact</a></li>
-                    <button>Download Resume</button>
+                    <li><button>Download Resume</button></li>
                 </ul>
-            </nav>
+            </motion.nav>
+            <div style={navButton}>
+                { showNav ? <img style={button} src={closeMenu} onClick={() => {handleClick("close")}} /> : <img style={button} src={navMenu} onClick={() => {handleClick("open")}} />}
+                {/* <motion.img style={openButton} src={navMenu} alt="nav menu" onClick={() => {handleClick("open")}} animate={{ opacity: showNav ? 0 : 1 }} initial={{ opacity: 1 }} transition={{ opacity: {duration: 0.1} }} />
+                <motion.img style={closeButton} src={closeMenu} alt="close menu" onClick={() => {handleClick("close")}} animate={{ opacity: showNav }} initial={{ opacity: 1 }} transition={{ opacity: {duration: 0.1} }} /> */}
+            </div>
         </div>
     )
 }

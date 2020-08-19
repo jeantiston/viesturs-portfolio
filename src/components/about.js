@@ -26,7 +26,7 @@ const About = () => {
     }
 
     return (
-        <div style={{position: "relative"}}> 
+        <div id="about" style={{position: "relative"}}> 
         <SectionHeader name="Background" />
             <div style={wrapperStyle}>
                 <div style={aboutStyles}>
