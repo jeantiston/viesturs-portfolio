@@ -8,6 +8,8 @@ import Layout from '../components/layout'
 import Hero from '../components/hero'
 import About from '../components/about'
 import Skills from '../components/skills'
+import Projects from '../components/projects'
+import Contact from '../components/contact'
 
 export default function Home() {
   const data = useStaticQuery(graphql`
@@ -69,6 +71,8 @@ export default function Home() {
     <Hero />
     <About />
     <Skills />
+    <Projects />
+    <Contact />
   </Layout>
   )
 }

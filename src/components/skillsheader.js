@@ -16,7 +16,7 @@ const SkillsHeader = ({ name, icon }) => {
     }
 
     const wrapperStyle = {
-        margin: "1  0px 0px 20px 25px"
+        margin: "10px 0px 20px 35px"
     }
 
     return (
