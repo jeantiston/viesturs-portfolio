@@ -5,7 +5,7 @@ const SkillsHeader = ({ name, icon }) => {
 
     const titleStyle = {
         position: "relative",
-        zIndex: 1,
+        // zIndex: 1,
         fontFamily: "Raleway, sans-serif",
         fontWeight: 300,
         // margin: "0px 5px 0px 20px",

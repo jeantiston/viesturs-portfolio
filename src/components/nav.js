@@ -14,7 +14,7 @@ const Nav = () => {
         height: "80px",
         width: "100vw",
         position: "relative",
-        zIndex: 2
+        zIndex: "2"
     }
 
     const navStyle = {
@@ -22,7 +22,7 @@ const Nav = () => {
         paddingTop: "100px",
         height: "100%",
         position: "fixed",
-        zIndex: "1",
+        zIndex: "3",
         top: "5vh",
         left: 0,
         width: "100%",

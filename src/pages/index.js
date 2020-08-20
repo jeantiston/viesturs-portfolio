@@ -59,7 +59,7 @@ export default function Home() {
           position: "fixed",
           left: "10vw",
           top: "22vh",
-          zIndex: -2
+          zIndex: -3
         }}/>
       </motion.div>
 

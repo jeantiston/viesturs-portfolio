@@ -4,14 +4,14 @@ const SectionHeader = ({ name }) => {
     // console.log('here')
 
     const titleStyle = {
-        position: "relative",
-        zIndex: 1,
         fontFamily: "Raleway, sans-serif",
-        margin: "30px 5px 0px 20px",
+        padding: "0px 0px 0px 25px",
+        margin: "50px 5px 50px 5px",
         color: "#F3C2D8",
-        backgroundColor: "#101113",
-        display: "inline",
-        padding: "10px"
+        width: "100%",
+        borderBottom: "1px solid #F3C2D8",
+        lineHeight: "0.1em",
+        // margin: "10px 0 20px"
     }
 
     const lineStyle = {
@@ -25,10 +25,15 @@ const SectionHeader = ({ name }) => {
         margin: "40px 0px 20px"
     }
 
+    const spanStyle = {
+        background: "#101113",
+        padding: "0 10px"
+    }
+
     return (
         <div style={wrapperStyle}>
-            <h2 style={titleStyle}> { name } </h2>
-            <div style={lineStyle}></div>
+            <h2 style={titleStyle}><span style={spanStyle}> { name } </span></h2>
+            {/* <div style={lineStyle}></div> */}
         </div>
     )
 }
