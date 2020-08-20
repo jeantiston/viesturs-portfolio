@@ -1,7 +1,7 @@
 import React from 'react'
-import SectionHeader from './sectionheader'
 
-import profilePhoto from '../assets/profile_photo.jpg'
+import SectionHeader from '@components/sectionheader'
+import profilePhoto from '@assets/profile_photo.jpg'
 
 const About = () => {
     const aboutStyles = {

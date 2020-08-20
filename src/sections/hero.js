@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-import heroStyles from './hero.module.css'
+import heroStyles from '@styles/hero.module.css'
 
 const Hero = () => {
     const data = useStaticQuery(graphql`

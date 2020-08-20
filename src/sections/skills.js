@@ -1,10 +1,10 @@
 import React from 'react'
 
-import SectionHeader from './sectionheader'
-import SkillsList from './skillslist'
+import SectionHeader from '@components/sectionheader'
+import SkillsList from '@components/skillslist'
 
-import devIcon from '../assets/development.svg'
-import desIcon from '../assets/design.svg'
+import devIcon from '@assets/development.svg'
+import desIcon from '@assets/design.svg'
 
 const Skills = () => {
     const devSkills = ['Javascript', 'HTML', 'CSS', 'Flask', 'Javascript', 'HTML', 'CSS', 'Flask']

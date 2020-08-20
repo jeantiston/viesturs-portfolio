@@ -4,12 +4,12 @@ import { graphql, useStaticQuery } from "gatsby"
 import { motion } from 'framer-motion';
 import Img from "gatsby-image"
 
-import Layout from '../components/layout'
-import Hero from '../components/hero'
-import About from '../components/about'
-import Skills from '../components/skills'
-import Projects from '../components/projects'
-import Contact from '../components/contact'
+import Layout from '@components/layout'
+import Hero from '@sections/hero'
+import About from '@sections/about'
+import Skills from '@sections/skills'
+import Projects from '@sections/projects'
+import Contact from '@sections/contact'
 
 export default function Home() {
   const data = useStaticQuery(graphql`

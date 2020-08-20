@@ -1,6 +1,6 @@
 import React from 'react'
 
-import SkillsHeader from './skillsheader'
+import SkillsHeader from '@components/skillsheader'
 
 const SkillsList = ({title, icon, skills}) => {
 

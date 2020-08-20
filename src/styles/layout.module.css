@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Raleway:wght@600;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:wght@600;300&display=swap');
 
 body{
     margin: 0px;
@@ -16,6 +16,7 @@ body{
 p{
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
+    line-height: 1.5rem;
 }
 
 h1,h3{

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import SectionHeader from './sectionheader'
+import SectionHeader from '@components/sectionheader'
 
 const Projects = () => {
     return (

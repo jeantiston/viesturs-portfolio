@@ -1,0 +1,26 @@
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 25px 30px 25px;
+}
+
+.input{
+    background-color: transparent;
+    margin: 10px 0px;
+    border: 1px solid #DBC2F3;
+    color: #DBC2F3;
+    border-radius: 5px;
+    min-height: 30px;
+    padding: 5px 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+}
+
+::placeholder{
+    color: #DBC2F3;
+}
+
+.desc{
+    margin: 30px 25px 30px 25px;
+    text-align: center;
+}
