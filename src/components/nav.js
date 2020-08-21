@@ -13,8 +13,8 @@ const Nav = () => {
         backgroundColor: "#765685",
         height: "80px",
         width: "100vw",
-        position: "relative",
-        zIndex: "2"
+        position: "fixed",
+        zIndex: "4"
     }
 
     const navStyle = {
