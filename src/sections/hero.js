@@ -1,25 +1,8 @@
 import React from 'react'
-import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
 
 import heroStyles from '@styles/hero.module.css'
 
 const Hero = () => {
-    const data = useStaticQuery(graphql`
-        query Images {
-            moon: file(relativePath: {eq: "moon.png"}) {
-                id
-                childImageSharp {
-                  fluid(maxWidth: 150, quality: 100) {
-                    ...GatsbyImageSharpFluid
-                    ...GatsbyImageSharpFluidLimitPresentationSize
-                  }
-                }
-            }
-        }
-    `)
-
-    // console.log(data)
 
     return (
         <div className={heroStyles.heroBg}>
@@ -38,14 +21,6 @@ const Hero = () => {
                     <button>Get In Touch</button>
                     
                 </div>
-                {/* <div className={heroStyles.block}>
-                    <Img fluid={data.mountain.childImageSharp.fluid} alt="mountain"/>
-                </div> */}
-            </div>
-            <div className={heroStyles.mountain}>
-                
-                {/* <p>Hello hello hello hello</p> */}
-                    {/* <Img fluid={data.mountain.childImageSharp.fluid} alt="mountain"/> */}
             </div>
            
             

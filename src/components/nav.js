@@ -1,8 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion';
+import { Link } from 'gatsby'
 
-import navMenu from '../assets/navmenu.svg'
-import closeMenu from '../assets/close.svg'
+import navMenu from '@assets/navmenu.svg'
+import closeMenu from '@assets/close.svg'
 
 const Nav = () => {
 
@@ -12,7 +13,7 @@ const Nav = () => {
         alignItems: "center",
         backgroundColor: "transparent",
         // backgroundColor: "rgba(118, 86, 133, 0.9)",
-        height: "80px",
+        // height: "80px",
         width: "100vw",
         position: "fixed",
         zIndex: "4"
@@ -24,7 +25,7 @@ const Nav = () => {
         height: "100vh",
         position: "fixed",
         zIndex: "3",
-        top: "5vh",
+        // top: "5vh",
         left: 0,
         width: "100vw",
         alignItems: "center",
@@ -37,14 +38,10 @@ const Nav = () => {
     const button = {
         paddingRight: "20px",
         width: "40px",
-        height: "40px"
-
+        height: "40px",
+        paddingTop: "20px"
     }
 
-    const closeButton = {
-        left: "324px",
-        top: "17px"
-    }
 
 
 
@@ -71,17 +68,15 @@ const Nav = () => {
             <motion.nav style={navStyle} animate={{ opacity: showNav }} initial={{ opacity: 0 }} transition={{ opacity: {duration: 0.3} }}>
 
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><Link to="/#about">About</Link></li>
+                    <li><Link to="/#skills">Skills</Link></li>
+                    <li><Link to="/#projects">Projects</Link></li>
+                    <li><Link to="/#contact">Contact</Link></li>
                     <li><button>Download Resume</button></li>
                 </ul>
             </motion.nav>
             <div style={navButton}>
                 { showNav ? <img style={button} src={closeMenu} onClick={() => {handleClick("close")}} /> : <img style={button} src={navMenu} onClick={() => {handleClick("open")}} />}
-                {/* <motion.img style={openButton} src={navMenu} alt="nav menu" onClick={() => {handleClick("open")}} animate={{ opacity: showNav ? 0 : 1 }} initial={{ opacity: 1 }} transition={{ opacity: {duration: 0.1} }} />
-                <motion.img style={closeButton} src={closeMenu} alt="close menu" onClick={() => {handleClick("close")}} animate={{ opacity: showNav }} initial={{ opacity: 1 }} transition={{ opacity: {duration: 0.1} }} /> */}
             </div>
         </div>
     )

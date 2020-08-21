@@ -1,12 +1,12 @@
 .heroBg{
     background: rgb(118,86,133);
-    background: linear-gradient(180deg, rgba(118,86,133,1) 10%, rgba(241,134,163,1) 50%, rgba(243,194,216,1) 70%, rgba(16,17,19,1) 80%);
+    background: linear-gradient(180deg, rgba(118,86,133,1) 10%, rgba(241,134,163,1) 50%, rgba(243,194,216,1) 70%, rgba(16,17,19,1) 90%);
     height: 100vh;
     color: white;
     display: grid;
     /* place-items: center; */
     grid-template-columns: 1fr;
-    grid-template-rows: 5vh 1fr 1fr;
+    grid-template-rows: 18vh 1fr 1fr;
     position: relative;
     z-index: -4;
 

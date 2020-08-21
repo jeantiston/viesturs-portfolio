@@ -2,8 +2,13 @@
 
 body{
     margin: 0px;
-    background-color: #101113   ;
+    background-color: #101113;
 }
+
+/* html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+} */
 
 .container{
     color: #FCF9F4;
