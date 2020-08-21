@@ -12,8 +12,6 @@ const Nav = () => {
         justifyContent: "flex-end",
         alignItems: "center",
         backgroundColor: "transparent",
-        // backgroundColor: "rgba(118, 86, 133, 0.9)",
-        // height: "80px",
         width: "100vw",
         position: "fixed",
         zIndex: "4"
@@ -25,7 +23,6 @@ const Nav = () => {
         height: "100vh",
         position: "fixed",
         zIndex: "3",
-        // top: "5vh",
         left: 0,
         width: "100vw",
         alignItems: "center",
