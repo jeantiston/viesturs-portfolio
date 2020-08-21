@@ -40,7 +40,7 @@ const About = () => {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt faucibus.
                     </p>
                 </div>
-                <img src={profilePhoto} alt="profile photo" style={photoStyle} />
+                <img src={profilePhoto} alt="jean" style={photoStyle} />
             </div>
         </div>
     )

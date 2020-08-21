@@ -25,7 +25,6 @@ const Nav = () => {
         zIndex: "3",
         left: 0,
         width: "100vw",
-        alignItems: "center",
         display: "none",
         justifyContent: "center",
         alignItems: "flex-start",
@@ -69,11 +68,11 @@ const Nav = () => {
                     <li><Link to="/#skills">Skills</Link></li>
                     <li><Link to="/#projects">Projects</Link></li>
                     <li><Link to="/#contact">Contact</Link></li>
-                    <li><button>Download Resume</button></li>
+                    <li><Link to="/#contact"><button>Download Resume</button></Link></li>
                 </ul>
             </motion.nav>
             <div style={navButton}>
-                { showNav ? <img style={button} src={closeMenu} onClick={() => {handleClick("close")}} /> : <img style={button} src={navMenu} onClick={() => {handleClick("open")}} />}
+                { showNav ? <img alt="close button" style={button} src={closeMenu} onClick={() => {handleClick("close")}} /> : <img alt="nav menu" style={button} src={navMenu} onClick={() => {handleClick("open")}} />}
             </div>
         </div>
     )
