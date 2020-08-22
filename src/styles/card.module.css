@@ -1,0 +1,45 @@
+.card{
+    border: solid 1px #DBC2F3;
+    border-radius: 10px;
+    width: 50vh;
+}
+
+.screencap{
+    object-fit: cover;
+    width: 50vh;
+    height: 200px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.title-icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px;
+}
+
+.project-title{
+    color: #DBC2F3;
+    width: 200px;
+}
+
+.project-icon{
+    width: 30px;
+    margin: 5px;
+}
+
+.project-desc{
+    padding: 0px 15px;
+}
+
+.tech-tags{
+    display: flex;
+    padding: 25px 15px;
+}
+
+.tech-tag{
+    margin: 0px 5px;
+    padding: 5px;
+    background: rgba(118, 86, 133, 0.56);
+    border-radius: 5px;
+}

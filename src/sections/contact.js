@@ -20,8 +20,6 @@ const Contact = () => {
                 <br />
                 <button type="submit">Send</button>
             </form>
-            <h1>haha</h1>
-            <div style={{height: 300}}>hello</div>
         </div>
     )
 }
