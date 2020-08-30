@@ -21,7 +21,7 @@ const SkillsHeader = ({ name, icon }) => {
     return (
         <div style={wrapperStyle}>
             <img src={icon} alt={name} />
-            <h2 style={titleStyle}> { name } </h2>
+            <h3 style={titleStyle}> { name } </h3>
         </div>
     )
 }

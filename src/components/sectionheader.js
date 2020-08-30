@@ -5,7 +5,7 @@ const SectionHeader = ({ name }) => {
     const titleStyle = {
         fontFamily: "Raleway, sans-serif",
         padding: "0px 0px 0px 10vw",
-        margin: "50px 5px 50px 5px",
+        margin: "30vh 5px 50px 5px",
         color: "#F3C2D8",
         width: "calc(90vw - 10px)",
         borderBottom: "1px solid #F3C2D8",

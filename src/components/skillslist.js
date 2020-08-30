@@ -9,7 +9,7 @@ const SkillsList = ({title, icon, skills}) => {
     })
 
     return (
-        <div>
+        <div >
             <SkillsHeader name={title} icon={icon} />
             <ul style={{
                 alignItems: "flex-start",

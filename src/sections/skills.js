@@ -3,6 +3,8 @@ import React from 'react'
 import SectionHeader from '@components/sectionheader'
 import SkillsList from '@components/skillslist'
 
+import skillStyle from '@styles/skills.module.css'
+
 import devIcon from '@assets/development.svg'
 import desIcon from '@assets/design.svg'
 
@@ -15,8 +17,12 @@ const Skills = () => {
     return (
         <div id="skills">
             <SectionHeader name="Skills" />
-            <SkillsList title="Development" skills={devSkills} icon={devIcon} />
-            <SkillsList title="Design" skills={desSkills} icon={desIcon} />
+            <div className={skillStyle.listlist}>
+                <SkillsList title="Development" skills={devSkills} icon={devIcon} />
+                <SkillsList title="Design" skills={desSkills} icon={desIcon} />
+                <SkillsList title="Design" skills={desSkills} icon={desIcon} />
+                <SkillsList title="Design" skills={desSkills} icon={desIcon} />
+            </div>
         </div>
     )
 }
