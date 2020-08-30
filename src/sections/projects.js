@@ -12,7 +12,7 @@ const Projects = () => {
     return (
         <div id="projects">
             <SectionHeader name="Projects" />
-            <div className={projectStyle.card} >
+            <div className={projectStyle.cards} >
                 <Card img={bootcampImg} 
                     title="Bootcamp Testimonial Page"
                     link="/"
@@ -36,6 +36,7 @@ const Projects = () => {
                     desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi scelerisque eu ultrices vitae auctor eu augue ut lectus. Vitae turpis massa sed elementum."
                     skills={["HTML", "CSS", "Javascript"]} 
                 />
+                <div class="item item1">Item 01dsdsdsds</div>
             </div>
         </div>
 

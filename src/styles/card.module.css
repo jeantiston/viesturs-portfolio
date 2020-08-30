@@ -1,12 +1,14 @@
 .card{
     border: solid 1px #DBC2F3;
     border-radius: 10px;
-    width: 50vh;
+    /* width: minmax(85vw, 350px); */
+    background: rgba(118, 86, 133, 0.2);
+    margin: 0px 20px;
 }
 
 .screencap{
     object-fit: cover;
-    width: 50vh;
+    /* width: 85vw; */
     height: 200px;
     border-radius: 5px 5px 0px 0px;
 }
@@ -20,7 +22,7 @@
 
 .project-title{
     color: #DBC2F3;
-    width: 200px;
+    /* width: 200px; */
 }
 
 .project-icon{
