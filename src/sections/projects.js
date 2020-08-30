@@ -36,7 +36,7 @@ const Projects = () => {
                     desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi scelerisque eu ultrices vitae auctor eu augue ut lectus. Vitae turpis massa sed elementum."
                     skills={["HTML", "CSS", "Javascript"]} 
                 />
-                <div class="item item1">Item 01dsdsdsds</div>
+                
             </div>
         </div>
 

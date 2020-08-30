@@ -1,28 +1,36 @@
 .card{
     border: solid 1px #DBC2F3;
     border-radius: 10px;
-    /* width: minmax(85vw, 350px); */
     background: rgba(118, 86, 133, 0.2);
-    margin: 0px 20px;
+    /* margin: 0px 25px; */
 }
 
 .screencap{
     object-fit: cover;
-    /* width: 85vw; */
+    width: 100%;
     height: 200px;
     border-radius: 5px 5px 0px 0px;
+    /* border: 5px solid red; */
 }
 
 .title-icons{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 15px;
+    padding: 0px 10px;
+    /* border: 5px solid greenyellow; */
+    /* max-width: calc(85vw - 20px); */
 }
 
 .project-title{
     color: #DBC2F3;
     /* width: 200px; */
+    /* border: 5px solid orange; */
+}
+
+.project-icons{
+    /* border: 5px solid aqua; */
+    /* width: 60px; */
 }
 
 .project-icon{
@@ -31,7 +39,9 @@
 }
 
 .project-desc{
-    padding: 0px 15px;
+    padding: 0px 10px;
+    /* border: 5px solid aqua; */
+    max-width: calc(85vw - 20px);
 }
 
 .tech-tags{

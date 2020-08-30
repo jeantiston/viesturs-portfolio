@@ -16,7 +16,7 @@ const Card = ({img, title, link, github, desc, skills}) => {
             <img alt={title} src={img} className={cardStyle.screencap} />
             <div className={cardStyle.titleIcons}>
                 <h3 className={cardStyle.projectTitle}>{title}</h3>
-                <div>
+                <div className={cardStyle.projectIcons}>
                     <a href={link} ><img src={webIcon} alt="go to website" className={cardStyle.projectIcon} /></a>
                     <a href={github}><img src={githubIcon} alt="go to source code" className={cardStyle.projectIcon} /></a>
                 </div>
