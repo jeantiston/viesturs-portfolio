@@ -1,3 +1,12 @@
+.center-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.contact-wrapper{
+    max-width: 700px;
+}
+
 .contact-form{
     display: flex;
     flex-direction: column;
