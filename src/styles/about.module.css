@@ -1,0 +1,23 @@
+.about{
+    color: #F3C2D8;
+    margin: 25px;
+}
+
+.about-p{
+    margin-bottom: 10px;
+}
+
+.photo{
+    border-radius: 100px;
+    width: 200px;
+    height: 200px;
+    margin: 25px;
+}
+
+.wrapper-style{
+    margin: 0px 20px; 
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
