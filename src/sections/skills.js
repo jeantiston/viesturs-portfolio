@@ -15,7 +15,7 @@ const Skills = () => {
     
 
     return (
-        <div id="skills">
+        <div id="skills" style={{position: "relative"}}>
             <SectionHeader name="Skills" />
             <div className={skillStyle.listlist}>
                 <SkillsList title="Development" skills={devSkills} icon={devIcon} />

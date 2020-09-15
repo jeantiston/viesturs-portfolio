@@ -11,6 +11,8 @@ import Skills from '@sections/skills'
 import Projects from '@sections/projects'
 import Contact from '@sections/contact'
 
+import indexStyles from '@styles/index.module.css'
+
 export default function Home() {
   const data = useStaticQuery(graphql`
         query Images1     {
@@ -66,9 +68,10 @@ export default function Home() {
     <img id="mountain" src={data.mountain.publicURL} alt="test" style={{
       position: "absolute",
       width: "100vw",
-      top: "70vh"
+      top: "60vh"
     }} /> 
     <Hero />
+    <div className={indexStyles.spacer} ></div>
     <About />
     <Skills />
     <Projects />

@@ -43,7 +43,7 @@
    }
 
    .desktop-menu{
-       background-color: rgba(118, 86, 133);
+       background-color: rgba(118, 86, 133, 1);
        display: flex;
        justify-content: flex-end;
        align-items: center;
