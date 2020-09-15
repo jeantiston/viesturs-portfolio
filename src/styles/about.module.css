@@ -1,6 +1,7 @@
 .about{
     color: #F3C2D8;
     margin: 25px;
+    
 }
 
 .about-p{
@@ -16,8 +17,15 @@
 
 .wrapper-style{
     margin: 0px 20px; 
+    width: 85vw;
     display: grid;
     align-items: center;
     justify-items: center;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.wrapwrap{
+    display: grid;
+    align-items: center;
+    justify-items: center;
 }

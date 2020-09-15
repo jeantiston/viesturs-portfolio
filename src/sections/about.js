@@ -10,6 +10,7 @@ const About = () => {
     return (
         <div id="about" style={{position: "relative"}}> 
         <SectionHeader name="Background" />
+        <div className={aboutStyles.wrapwrap} >
             <div className={aboutStyles.wrapperStyle}>
                 <div className={aboutStyles.about}>
                     <p className={aboutStyles.aboutP}>
@@ -23,6 +24,7 @@ const About = () => {
                     </p>
                 </div>
                 <img src={profilePhoto} alt="jean" className={aboutStyles.photo} />
+            </div>
             </div>
         </div>
     )

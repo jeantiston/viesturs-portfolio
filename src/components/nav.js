@@ -5,40 +5,32 @@ import { Link } from 'gatsby'
 import navMenu from '@assets/navmenu.svg'
 import closeMenu from '@assets/close.svg'
 
+import navStyles from '@styles/nav.module.css'
+
 const Nav = () => {
 
-    const navButton = {
-        display: "flex",
-        justifyContent: "flex-end",
-        alignItems: "center",
-        backgroundColor: "transparent",
-        width: "100vw",
-        position: "fixed",
-        zIndex: "4"
-    }
+    const menuItems = [
+        {
+            title: 'About',
+            slug: '/#about'
+        },
+        {
+            title: 'Skills',
+            slug: '/#skills'
+        },
+        {
+            title: 'Projects',
+            slug: '/#projects'
+        },
+        {
+            title: 'Contact',
+            slug: '/#contact'
+        }
+    ]
 
-    const navStyle = {
-        backgroundColor: "rgba(118, 86, 133, 0.9)",
-        paddingTop: "100px",
-        height: "100vh",
-        position: "fixed",
-        zIndex: "3",
-        left: 0,
-        width: "100vw",
-        display: "none",
-        justifyContent: "center",
-        alignItems: "flex-start",
-        overflow: "hidden"
-    }
-
-    const button = {
-        paddingRight: "20px",
-        width: "40px",
-        height: "40px",
-        paddingTop: "20px"
-    }
-
-
+    const menuHtml = menuItems.map( item => {
+    return <li><Link to={item.slug}>{item.title}</Link></li>
+    } )
 
 
     const [showNav, setShowNav] = React.useState(0)
@@ -61,18 +53,21 @@ const Nav = () => {
 
     return (
         <div>
-            <motion.nav style={navStyle} animate={{ opacity: showNav }} initial={{ opacity: 0 }} transition={{ opacity: {duration: 0.3} }}>
+            <ul className={navStyles.desktopMenu}>
+                    { menuHtml }
+                    <li><Link to="/#contact">Resume</Link></li>
+            </ul>
+            <motion.nav className={navStyles.navStyle} animate={{ opacity: showNav }} initial={{ opacity: 0 }} transition={{ opacity: {duration: 0.3} }}>
 
-                <ul>
-                    <li><Link to="/#about">About</Link></li>
-                    <li><Link to="/#skills">Skills</Link></li>
-                    <li><Link to="/#projects">Projects</Link></li>
-                    <li><Link to="/#contact">Contact</Link></li>
+                <ul className={navStyles.mobileMenu}>
+                    { menuHtml }
                     <li><Link to="/#contact"><button>Download Resume</button></Link></li>
                 </ul>
+
+                
             </motion.nav>
-            <div style={navButton}>
-                { showNav ? <img alt="close button" style={button} src={closeMenu} onClick={() => {handleClick("close")}} /> : <img alt="nav menu" style={button} src={navMenu} onClick={() => {handleClick("open")}} />}
+            <div className={navStyles.navButton}>
+                { showNav ? <img alt="close button" className={navStyles.button} src={closeMenu} onClick={() => {handleClick("close")}} /> : <img alt="nav menu" className={navStyles.button} src={navMenu} onClick={() => {handleClick("open")}} />}
             </div>
         </div>
     )
