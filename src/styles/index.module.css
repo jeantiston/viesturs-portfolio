@@ -1,6 +1,63 @@
 .spacer{
-    /* border: 5px solid red; */
-    width: 100vw;
-    height: 50vh;
+    display: none;
 }
 
+.mountain{
+    position: absolute;
+    width: 100vw;
+    top: 65vh;
+}
+
+.moon{
+    /* border: 5px solid red; */
+    position: fixed;
+    left: 10vw;
+    top: 20vh;
+    z-index: -3;
+}
+
+.moon-big{
+    display: none !important; 
+}
+
+.moon-small{
+    display: inline-block !important;
+}
+
+@media only screen and (min-width: 500px) {
+    .spacer{
+        position: relative;
+        /* border: 5px solid red; */
+        z-index: 4;
+        display: block;
+        width: 100vw;
+        height: 15vw;
+    }
+
+    .mountain{
+        top: 60vh;
+    }
+
+
+}
+
+@media only screen and (min-width: 800px) {
+    .spacer{
+        height: 25vw;
+    }
+
+    .moon{
+        position: fixed;
+        left: 15vw;
+        top: 30vh;
+        z-index: -3;
+    }
+
+    .moon-big{
+        display: inline-block !important;
+    }
+    
+    .moon-small{
+        display: none !important;
+    }
+}

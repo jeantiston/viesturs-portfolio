@@ -19,11 +19,19 @@ export default function Home() {
             moon: file(relativePath: {eq: "moon.png"}) {
                 id
                 childImageSharp {
-                  fixed(width: 100, quality: 100) {
+                  fixed(width: 120, quality: 100) {
                     ...GatsbyImageSharpFixed
                   }
                 }
             }
+            moon2: file(relativePath: {eq: "moon.png"}) {
+              id
+              childImageSharp {
+                fixed(width: 100, quality: 100) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+          }
             mountain: file(relativePath: {eq: "mountain.png"}) {
                 publicURL
               }
@@ -56,20 +64,12 @@ export default function Home() {
   return (
   <Layout>
     
-      <motion.div animate={{ opacity: moonOpacity }} transition={{ opacity: {duration: 0.1} }}>
-        <Img fixed={data.moon.childImageSharp.fixed} alt="moon" style={{
-          position: "fixed",
-          left: "10vw",
-          top: "22vh",
-          zIndex: -3
-        }}/>
+      <motion.div className={indexStyles.moon} animate={{ opacity: moonOpacity }} transition={{ opacity: {duration: 0.1} }}>
+        <Img className={indexStyles.moonBig} fixed={data.moon.childImageSharp.fixed} alt="moon"  />
+        <Img  className={indexStyles.moonSmall} fixed={data.moon2.childImageSharp.fixed} alt="moon"  />
       </motion.div>
 
-    <img id="mountain" src={data.mountain.publicURL} alt="test" style={{
-      position: "absolute",
-      width: "100vw",
-      top: "60vh"
-    }} /> 
+    <img id="mountain" src={data.mountain.publicURL} alt="test" className={indexStyles.mountain} /> 
     <Hero />
     <div className={indexStyles.spacer} ></div>
     <About />
