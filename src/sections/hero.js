@@ -17,7 +17,7 @@ const Hero = () => {
                     <h1>Jean Tiston</h1>
                 </div>
                 <div className={heroStyles.block}>
-                    <p className={heroStyles.elevator}>I’m a software engineer that focus on creating beautiful and functional websites that clearly reflects your brand. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. </p>
+                    <p className={heroStyles.elevator}>I’m a software engineer based in Manila focusing on creating stunning and functional websites, user interfaces and content that clearly reflects your brand. </p>
                 </div>
                 <div className={heroStyles.cta}>
                     <button onClick="location.href='/#contact'" type="button">Get In Touch</button>
