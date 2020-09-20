@@ -55,13 +55,13 @@ const Nav = () => {
         <div>
             <ul className={navStyles.desktopMenu}>
                     { menuHtml }
-                    <li><Link to="/#contact">Resume</Link></li>
+                    <li><a href="https://drive.google.com/file/d/1RTMy8t8rwMLprahJVLvMNgUiZPwPk3oE/view?usp=sharing" target="_blank">Resume</a></li>
             </ul>
             <motion.nav className={navStyles.navStyle} animate={{ opacity: showNav }} initial={{ opacity: 0 }} transition={{ opacity: {duration: 0.3} }}>
 
                 <ul className={navStyles.mobileMenu}>
                     { menuHtml }
-                    <li><Link to="/#contact"><button>Download Resume</button></Link></li>
+                    <li><a href="https://drive.google.com/file/d/1RTMy8t8rwMLprahJVLvMNgUiZPwPk3oE/view?usp=sharing" target="_blank">Resume</a></li>
                 </ul>
 
                 
