@@ -11,6 +11,7 @@ import desIcon from '@assets/design.svg'
 const Skills = () => {
     const devSkills = ['Javascript', 'HTML', 'CSS', 'Flask', 'Javascript', 'HTML', 'CSS', 'Flask']
     const desSkills = ['Figma', 'Prototyping', 'Photoshop', 'Lightroom']
+    const desSkills = ['Figma', 'Prototyping', 'Photoshop', 'Lightroom']
 
     
 
