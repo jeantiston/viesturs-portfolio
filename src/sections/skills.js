@@ -7,7 +7,7 @@ import SkillsList from '@components/skillslist'
 import skillStyle from '@styles/skills.module.css'
 
 // import devIcon from '@assets/development.svg'
-// import desIcon from '@assets/design.svg'
+import resumeIcon from '@assets/resume.svg'
 
 const Skills = () => {
 
@@ -44,6 +44,9 @@ const Skills = () => {
             <SectionHeader name="Skills" />
             <div className={skillStyle.listlist}>
                 { skillsHtml }
+                <a href="https://drive.google.com/file/d/1RTMy8t8rwMLprahJVLvMNgUiZPwPk3oE/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    <SkillsList title="View My Resume" skills={[]} icon={resumeIcon} />
+                </a>
             </div>
         </div>
     )
