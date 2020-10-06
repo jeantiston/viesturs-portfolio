@@ -4,9 +4,13 @@ import SkillsHeader from '@components/skillsheader'
 
 const SkillsList = ({title, icon, skills}) => {
 
-    const skillsList = skills.map( skill => {
-        return <li>{skill}</li>
-    })
+    let skillsList = []
+
+    if (skills) {
+        skillsList = skills.map( skill => {
+            return <li>{skill}</li>
+        })
+    }
 
     return (
         <div >
