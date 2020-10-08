@@ -19,7 +19,7 @@ const Hero = () => {
                     <p className={heroStyles.elevator}>I’m a software engineer based in Manila focusing on creating stunning and functional websites, user interfaces and content that clearly reflects your brand. </p>
                 </div>
                 <div className={heroStyles.cta}>
-                    <Link to='/#contact' className={heroStyles.button} >Hello In Touch</Link>                    
+                    <Link to='/#contact' className={heroStyles.button} >Get In Touch</Link>                    
                 </div>
             </div>
            
