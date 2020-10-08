@@ -32,6 +32,15 @@ export default function Home() {
                 }
               }
           }
+
+          mountain2: file(relativePath: {eq: "mountain.png"}) {
+            id
+            childImageSharp {
+              fixed(width: 2560, quality: 100) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
             mountain: file(relativePath: {eq: "mountain.png"}) {
                 publicURL
               }
@@ -68,8 +77,10 @@ export default function Home() {
         <Img className={indexStyles.moonBig} fixed={data.moon.childImageSharp.fixed} alt="moon"  />
         <Img  className={indexStyles.moonSmall} fixed={data.moon2.childImageSharp.fixed} alt="moon"  />
       </motion.div>
-
-    <img id="mountain" src={data.mountain.publicURL} alt="test" className={indexStyles.mountain} /> 
+    {/* <div>
+    <Img id="mountain" src={data.mountain2.childImageSharp.fixed} alt="mountain" className={indexStyles.mountain} /> 
+    </div> */}
+    <img id="mountain" src={data.mountain.publicURL} alt="mountain" className={indexStyles.mountain} /> 
     <Hero />
     <div className={indexStyles.spacer} ></div>
     <About />
