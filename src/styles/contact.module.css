@@ -13,6 +13,10 @@
     margin: 30px 25px 30px 25px;
 }
 
+.hidden{
+    display: none;
+}
+
 .input{
     background-color: transparent;
     margin: 10px 0px;

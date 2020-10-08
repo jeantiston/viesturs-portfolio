@@ -6,16 +6,22 @@ import contactStyles from '@styles/contact.module.css'
 
 const Contact = () => {
 
+    const handleSubmit = event => {
+        event.preventDefault()
+        document.getElementById("form").classList.add(contactStyles.hidden);
+        console.log("Submitted")
+    }
+
     return (
         <div id="contact" >
             <SectionHeader name="Get In Touch" />
             <div className={contactStyles.centerWrapper} >
-            <div className={contactStyles.contactWrapper} >
+            <div id="form" className={contactStyles.contactWrapper} >
                 <p className={contactStyles.desc}>
                     Do you have a project in mind or just want to say hi? Feel free to drop me a message! I’ll get back to you as soon as I can.
                 </p>
                 {/* <form method="post" action="#" className={contactStyles.contactForm} > */}
-                <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" className={contactStyles.contactForm} >
+                <form onSubmit={handleSubmit} name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" className={contactStyles.contactForm} >
                     <input type="hidden" name="form-name" value="contact" />
                     <input className={contactStyles.input} type="text" name="name" id="name" placeholder="Name" />
                     <input className={contactStyles.input} type="email" name="email" id="email" placeholder="Email" />
