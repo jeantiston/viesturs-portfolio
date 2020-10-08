@@ -6,6 +6,7 @@
     position: absolute;
     width: 100vw;
     top: 65vh;
+    z-index: 3;
 }
 
 .moon{
@@ -13,7 +14,7 @@
     position: fixed;
     left: 10vw;
     top: 15vh;
-    z-index: -3;
+    z-index: 1;
 }
 
 .moon-big{
@@ -37,6 +38,7 @@
 
     .mountain{
         top: 60vh;
+        z-index: 3;
     }
 
     .moon{
@@ -44,7 +46,7 @@
         position: fixed;
         left: 10vw;
         top: 20vh;
-        z-index: -3;
+        z-index: 1;
     }
 
 
@@ -59,7 +61,7 @@
         position: fixed;
         left: 12vw;
         top: 30vh;
-        z-index: -3;
+        z-index: 1;
     }
 
     .moon-big{

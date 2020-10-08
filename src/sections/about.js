@@ -8,7 +8,7 @@ import profilePhoto from '@assets/profile_photo.jpg'
 const About = () => {
 
     return (
-        <div id="about" style={{position: "relative"}}> 
+        <div id="about" style={{position: "relative", zIndex: 4}}> 
         <SectionHeader name="Background" />
         <div className={aboutStyles.wrapwrap} >
             <div className={aboutStyles.wrapperStyle}>
