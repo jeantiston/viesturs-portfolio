@@ -4,22 +4,11 @@
     height: 100vh;
     color: white;
     display: grid;
-    /* place-items: center; */
     grid-template-columns: 1fr;
     grid-template-rows: 18vh 1fr 1fr;
     position: relative;
-    /* z-index: -4; */
 
 }
-
-/* .mountain{
-    display: block;
-    min-width: 100vw;
-    align-self: end;
-    grid-row: -1;
-    position: relative;
-    z-index: 0;
-} */
 
 .hero{
     display: grid;

@@ -10,7 +10,6 @@
 }
 
 .moon{
-    /* border: 5px solid red; */
     position: fixed;
     left: 10vw;
     top: 15vh;
@@ -29,7 +28,6 @@
 @media only screen and (min-width: 500px) {
     .spacer{
         position: relative;
-        /* border: 5px solid red; */
         z-index: 4;
         display: block;
         width: 100vw;
@@ -42,7 +40,6 @@
     }
 
     .moon{
-        /* border: 5px solid red; */
         position: fixed;
         left: 10vw;
         top: 20vh;

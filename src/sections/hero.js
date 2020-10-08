@@ -9,7 +9,6 @@ const Hero = () => {
         <div className={heroStyles.heroBg}>
             <div className={heroStyles.hero}>
                 <div className={heroStyles.moonWrapper}>
-                    {/* <Img className={heroStyles.moon} fluid={data.moon.childImageSharp.fluid} alt="moon"/> */}
                 </div>
                 
                 <div className={heroStyles.headline}>
@@ -20,11 +19,7 @@ const Hero = () => {
                     <p className={heroStyles.elevator}>I’m a software engineer based in Manila focusing on creating stunning and functional websites, user interfaces and content that clearly reflects your brand. </p>
                 </div>
                 <div className={heroStyles.cta}>
-                    {/* <button onClick="location.href='/#contact'" type="button">Get In Touch</button> */}
-                    <Link to='/#contact' className={heroStyles.button} >Hello In Touch</Link>
-                    
-                    {/* <a href="https://drive.google.com/file/d/1RTMy8t8rwMLprahJVLvMNgUiZPwPk3oE/view?usp=sharing" target="_blank">Resume</a> */}
-                    
+                    <Link to='/#contact' className={heroStyles.button} >Hello In Touch</Link>                    
                 </div>
             </div>
            
