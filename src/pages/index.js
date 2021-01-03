@@ -10,6 +10,7 @@ import About from '@sections/about'
 import Skills from '@sections/skills'
 import Projects from '@sections/projects'
 import Contact from '@sections/contact'
+import Footer from '@sections/footer'
 
 import indexStyles from '@styles/index.module.css'
 
@@ -87,6 +88,7 @@ export default function Home() {
     <Skills />
     <Projects />
     <Contact />
+    <Footer />
   </Layout>
   )
 }

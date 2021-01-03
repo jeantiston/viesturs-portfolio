@@ -37,11 +37,12 @@
 
 .tech-tags{
     display: flex;
+    flex-wrap: wrap;
     padding: 25px 15px;
 }
 
 .tech-tag{
-    margin: 0px 5px;
+    margin: 3px 5px;
     padding: 5px;
     background: rgba(118, 86, 133, 0.56);
     border-radius: 5px;

@@ -1,0 +1,17 @@
+.footerBg{
+    background: rgba(16,17,19,1) ;
+    background: linear-gradient(180deg, rgba(16,17,19,1) 10%, rgba(243,194,216,1) 70%, rgba(241,134,163,1) 90%, rgba(118,86,133,1) 100%);
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;;
+}
+
+.icons{
+    display: flex;
+}
+
+.credits{
+    display: flex;
+    text-align: center;
+    border: 5px coral solid;
+    justify-content: space-evenly;
+}

@@ -17,8 +17,8 @@ const Card = ({img, title, link, github, desc, skills}) => {
             <div className={cardStyle.titleIcons}>
                 <h4 className={cardStyle.projectTitle}>{title}</h4>
                 <div className={cardStyle.projectIcons}>
-                    <a href={link} target="_blank" rel="noopener noreferrer"><img src={webIcon} alt="go to website" className={cardStyle.projectIcon} /></a>
-                    <a href={github} target="_blank" rel="noopener noreferrer"><img src={githubIcon} alt="go to source code" className={cardStyle.projectIcon}  /></a>
+                    {link && <a href={link} target="_blank" rel="noopener noreferrer"><img src={webIcon} alt="go to website" className={cardStyle.projectIcon} /></a>}
+                    {github && <a href={github} target="_blank" rel="noopener noreferrer"><img src={githubIcon} alt="go to source code" className={cardStyle.projectIcon}  /></a>}
                 </div>
             </div>
             <p className={cardStyle.projectDesc}>{ desc }</p>
