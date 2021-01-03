@@ -2,6 +2,13 @@
     display: none;
 }
 
+.bg{
+    background: rgb(118,86,133);
+    background: linear-gradient(180deg, rgba(118,86,133,1) 10%, rgba(241,134,163,1) 70%, rgba(243,194,216,1) 90%, rgba(16,17,19,1) 100%);
+    width: 100vw;
+    height: 100vh;
+}
+
 .mountain{
     position: absolute;
     width: 100vw;
