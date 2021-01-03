@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Img from "gatsby-image"
 
 import Layout from '@components/layout'
+import Head from '@components/head'
 import Hero from '@sections/hero'
 import About from '@sections/about'
 import Skills from '@sections/skills'
@@ -73,11 +74,11 @@ export default function Home() {
 
   return (
   <Layout>
-    
-      <motion.div className={indexStyles.moon} animate={{ opacity: moonOpacity }} transition={{ opacity: {duration: 0.1} }}>
-        <Img className={indexStyles.moonBig} fixed={data.moon.childImageSharp.fixed} alt="moon"  />
-        <Img  className={indexStyles.moonSmall} fixed={data.moon2.childImageSharp.fixed} alt="moon"  />
-      </motion.div>
+    <Head title="Jean Tiston | Software Engineer" />
+    <motion.div className={indexStyles.moon} animate={{ opacity: moonOpacity }} transition={{ opacity: {duration: 0.1} }}>
+      <Img className={indexStyles.moonBig} fixed={data.moon.childImageSharp.fixed} alt="moon"  />
+      <Img  className={indexStyles.moonSmall} fixed={data.moon2.childImageSharp.fixed} alt="moon"  />
+    </motion.div>
     {/* <div>
     <Img id="mountain" src={data.mountain2.childImageSharp.fixed} alt="mountain" className={indexStyles.mountain} /> 
     </div> */}
