@@ -9,8 +9,8 @@
 @media only screen and (min-width: 768px) {
     .footer-bg{
         background: rgba(16,17,19,1) ;
-        background: linear-gradient(180deg, rgba(16,17,19,1) 10%, rgba(243,194,216,1) 70%, rgba(241,134,163,1) 90%, rgba(118,86,133,1) 100%);
-        min-height: 100vh;
+        background: linear-gradient(180deg, rgba(16,17,19,1) 10%, rgba(243,194,216,1) 45%, rgba(241,134,163,1) 65%, rgba(118,86,133,1) 90%);
+        min-height: 70vh;
         font-family: 'Montserrat', sans-serif;;
     }
 }
