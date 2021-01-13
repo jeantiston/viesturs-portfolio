@@ -14,7 +14,7 @@ const Footer = () => {
     return (
         <div className={footerStyles.footerBg}>
             {/* <h1>Footer</h1> */}
-            <img id="mountain-footer" src={mountainPhoto} />
+            <img className={footerStyles.mountain} id="mountain-footer" src={mountainPhoto} />
             <div className={footerStyles.icons}>
             <a href="https://github.com/jeantiston" target="_blank" rel="noopener noreferrer"><img src={githubIcon} alt="GitHub" className={footerStyles.footerIcon} /></a>
             <a href="https://www.linkedin.com/in/jeantiston/" target="_blank" rel="noopener noreferrer"><img src={linkedinIcon} alt="LinkedIn" className={footerStyles.footerIcon} /></a>
