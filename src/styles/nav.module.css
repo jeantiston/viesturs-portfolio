@@ -42,6 +42,10 @@
        display: none;
    }
 
+   .menu-bg{
+        background-color: rgba(118, 86, 133, 1);
+   }
+
    .desktop-menu{
        background-color: rgba(118, 86, 133, 1);
        display: flex;

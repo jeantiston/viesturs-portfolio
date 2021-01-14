@@ -7,6 +7,24 @@ import closeMenu from '@assets/close.svg'
 
 import navStyles from '@styles/nav.module.css'
 
+const navVariants = {
+    init: {
+        opacity: 0,
+        x: '-2vw'
+    },
+    visible: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            type: 'tween',
+            duration: 0.6,
+            ease: "easeIn",
+            delayChildren: 0.5,
+            staggerChildren: 0.3
+        }
+    }
+}
+
 const Nav = () => {
 
     const menuItems = [
@@ -53,10 +71,16 @@ const Nav = () => {
 
     return (
         <div>
-            <ul className={navStyles.desktopMenu}>
-                    { menuHtml }
-                    <li><a href="https://drive.google.com/file/d/1RTMy8t8rwMLprahJVLvMNgUiZPwPk3oE/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a></li>
-            </ul>
+            <div className={navStyles.menuBg}>
+                <motion.ul className={navStyles.desktopMenu}
+                    variants={navVariants}
+                    initial="init"
+                    animate="visible"
+                >
+                        { menuHtml }
+                        <li><a href="https://drive.google.com/file/d/1RTMy8t8rwMLprahJVLvMNgUiZPwPk3oE/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a></li>
+                </motion.ul>
+            </div>
             <motion.nav className={navStyles.navStyle} animate={{ opacity: showNav }} initial={{ opacity: 0 }} transition={{ opacity: {duration: 0.3} }}>
 
                 <ul className={navStyles.mobileMenu}>
