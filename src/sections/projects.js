@@ -1,10 +1,30 @@
 import React from 'react'
 import { graphql, useStaticQuery } from "gatsby"
 
+import { motion } from 'framer-motion'
+
 import projectStyle from '@styles/project.module.css'
 
 import Card from '@components/card'
 import SectionHeader from '@components/sectionheader'
+
+const projectsVariants = {
+  init: {
+      opacity: 0,
+      x: '-2vw'
+  },
+  visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+          type: 'tween',
+          duration: 0.6,
+          ease: "easeIn",
+          delayChildren: 0.5,
+          staggerChildren: 0.3
+      }
+  }
+}
 
 const Projects = () => {
 
@@ -54,10 +74,14 @@ const Projects = () => {
         <div id="projects">
             <SectionHeader name="Projects" />
             
-            <div className={projectStyle.cards} >
+            <motion.div className={projectStyle.cards} 
+              variants={projectsVariants}
+              initial="init"
+              animate="visible"
+            >
                 { projectsHtml }
                 
-            </div>
+            </motion.div>
         </div>
 
     )

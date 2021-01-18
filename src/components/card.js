@@ -1,9 +1,29 @@
 import React from 'react'
 
+import { motion } from 'framer-motion'
+
 import cardStyle from '@styles/card.module.css'
 
 import githubIcon from '@assets/038-github.svg'
 import webIcon from '@assets/020-web.svg'
+
+const projectsVariants = {
+    init: {
+        opacity: 0,
+        x: '-2vw'
+    },
+    visible: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            type: 'tween',
+            duration: 0.6,
+            ease: "easeIn",
+            delayChildren: 0.5,
+            staggerChildren: 0.3
+        }
+    }
+  }
 
 const Card = ({img, title, link, github, desc, skills}) => {
 
@@ -12,7 +32,9 @@ const Card = ({img, title, link, github, desc, skills}) => {
     })
 
     return (
-        <div className={cardStyle.card}>
+        <motion.div className={cardStyle.card}
+            variants={projectsVariants}
+        >
             <a href={link} target="_blank" rel="noopener noreferrer"><img alt={title} src={img} className={cardStyle.screencap} /></a>
             <div className={cardStyle.titleIcons}>
                 <h4 className={cardStyle.projectTitle}>{title}</h4>
@@ -25,7 +47,7 @@ const Card = ({img, title, link, github, desc, skills}) => {
             <div className={cardStyle.techTags} >
                 { skillChips }
             </div>
-        </div>
+        </motion.div>
     )
 }
 
