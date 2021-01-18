@@ -52,10 +52,33 @@ const Nav = () => {
 
 
     const [showNav, setShowNav] = React.useState(0)
+    const [lastYPos, setLastYPos] = React.useState(0)
+    const [shouldShowNav, setShouldShowNav] = React.useState(true)
+
+    React.useEffect(() => {
+        function handleScroll() {
+            // console.log('scrolled')
+            const yPos = window.scrollY;
+            const isScrollingUp = yPos < lastYPos;
+
+            setShouldShowNav(isScrollingUp)
+            setLastYPos(yPos)
+
+        }
+
+        window.addEventListener('scroll', handleScroll, false)
+
+        return () => {
+            window.addEventListener('scroll', handleScroll, false)
+        }
+
+    }, [lastYPos])
+
+    
 
     function handleClick(cmd){
         if( cmd === "open" ){
-            console.log(document.getElementsByTagName("nav")[0].style.display)
+            // console.log(document.getElementsByTagName("nav")[0].style.display)
             document.getElementsByTagName("nav")[0].style.display = 'flex'
             setShowNav(1)
             document.body.style.overflow = 'hidden'
@@ -71,7 +94,11 @@ const Nav = () => {
 
     return (
         <div>
-            <div className={navStyles.menuBg}>
+            <motion.div className={`${navStyles.menuBg} ${navStyles.active}`}
+                initial={{ y: "0" }}
+                animate={{ y: shouldShowNav ? "0" : "-10vh" }}
+                transition={{ duration: 0.05, type: 'tween' }}
+            >
                 <motion.ul className={navStyles.desktopMenu}
                     variants={navVariants}
                     initial="init"
@@ -80,7 +107,7 @@ const Nav = () => {
                         { menuHtml }
                         <li><a href="https://drive.google.com/file/d/1RTMy8t8rwMLprahJVLvMNgUiZPwPk3oE/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a></li>
                 </motion.ul>
-            </div>
+            </motion.div>
             <motion.nav className={navStyles.navStyle} animate={{ opacity: showNav }} initial={{ opacity: 0 }} transition={{ opacity: {duration: 0.3} }}>
 
                 <ul className={navStyles.mobileMenu}>

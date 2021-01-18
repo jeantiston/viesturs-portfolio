@@ -53,10 +53,10 @@ export default function Home() {
 
     React.useEffect(() => {
       function handleScroll() {
-        console.log(window.innerHeight)
+        // console.log(window.innerHeight)
         const yPos = window.scrollY;
         const moonPos = yPos + (window.innerHeight * 50)/100
-        console.log(moonPos)
+        // console.log(moonPos)
         
         if(moonPos >=  window.innerHeight){
           setMoonOpacity(0)
