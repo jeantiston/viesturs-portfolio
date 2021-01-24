@@ -53,7 +53,7 @@ const Nav = () => {
     const width = window.innerWidth;
     const breakpoint = 768;
 
-    const [showNav, setShowNav] = React.useState(0)
+    const [showNav, setShowNav] = React.useState(false)
     const [lastYPos, setLastYPos] = React.useState(0)
     const [shouldShowNav, setShouldShowNav] = React.useState(true)
 
@@ -80,11 +80,11 @@ const Nav = () => {
     function handleClick(cmd){
         if( cmd === "open" ){
             document.getElementsByTagName("nav")[0].style.display = 'flex'
-            setShowNav(1)
+            setShowNav(true)
             document.body.style.overflow = 'hidden'
         }
         else {
-            setShowNav(0)
+            setShowNav(false)
             document.getElementsByTagName("nav")[0].style.display = 'none'
             document.body.style.overflow = 'auto'
         }
@@ -94,14 +94,15 @@ const Nav = () => {
 
     return (
         <div>
+            <div className={navStyles.navButton}>
+                    { showNav && <img alt="close button" className={navStyles.button} src={closeMenu} onClick={() => {handleClick("close")}} /> }
+            </div>
             <motion.nav className={navStyles.navStyle} animate={{ opacity: showNav }} initial={{ opacity: 0 }} transition={{ opacity: {duration: 0.3} }}>
                 <ul className={navStyles.mobileMenu}>
                     { menuHtml }
                     <li><a href="https://drive.google.com/file/d/1RTMy8t8rwMLprahJVLvMNgUiZPwPk3oE/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a></li>
                 </ul>
-                <div className={navStyles.navButton}>
-                    { showNav && <img alt="close button" className={navStyles.button} src={closeMenu} onClick={() => {handleClick("close")}} /> }
-                </div>
+                
 
             </motion.nav>
 
