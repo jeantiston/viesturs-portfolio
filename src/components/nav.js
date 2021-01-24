@@ -47,9 +47,11 @@ const Nav = () => {
     ]
 
     const menuHtml = menuItems.map( item => {
-    return <li><Link to={item.slug}>{item.title}</Link></li>
+    return <motion.li onClick={() => {handleClick("close")}}  variants={navVariants}><Link to={item.slug}>{item.title}</Link></motion.li>
     } )
 
+    const width = window.innerWidth;
+    const breakpoint = 768;
 
     const [showNav, setShowNav] = React.useState(0)
     const [lastYPos, setLastYPos] = React.useState(0)
@@ -57,7 +59,6 @@ const Nav = () => {
 
     React.useEffect(() => {
         function handleScroll() {
-            // console.log('scrolled')
             const yPos = window.scrollY;
             const isScrollingUp = yPos < lastYPos;
 
@@ -78,7 +79,6 @@ const Nav = () => {
 
     function handleClick(cmd){
         if( cmd === "open" ){
-            // console.log(document.getElementsByTagName("nav")[0].style.display)
             document.getElementsByTagName("nav")[0].style.display = 'flex'
             setShowNav(1)
             document.body.style.overflow = 'hidden'
@@ -94,6 +94,35 @@ const Nav = () => {
 
     return (
         <div>
+            <motion.nav className={navStyles.navStyle} animate={{ opacity: showNav }} initial={{ opacity: 0 }} transition={{ opacity: {duration: 0.3} }}>
+                <ul className={navStyles.mobileMenu}>
+                    { menuHtml }
+                    <li><a href="https://drive.google.com/file/d/1RTMy8t8rwMLprahJVLvMNgUiZPwPk3oE/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a></li>
+                </ul>
+                <div className={navStyles.navButton}>
+                    { showNav && <img alt="close button" className={navStyles.button} src={closeMenu} onClick={() => {handleClick("close")}} /> }
+                </div>
+
+            </motion.nav>
+
+            {width < breakpoint ? 
+            //Mobile Nav
+            <motion.div className={`${navStyles.menuBg} ${navStyles.active}`}
+                initial={{ y: "0" }}
+                animate={{ y: shouldShowNav ? "0" : "-10vh" }}
+                transition={{ duration: 0.05, type: 'tween' }}
+            >
+                
+                <motion.div className={navStyles.navButton}
+                    variants={navVariants}
+                    initial="init"
+                    animate="visible"
+                >
+                    { !showNav && <img alt="nav menu" className={navStyles.button} src={navMenu} onClick={() => {handleClick("open")}} />}
+                </motion.div>
+                
+            </motion.div>
+            : // Desktop Nav
             <motion.div className={`${navStyles.menuBg} ${navStyles.active}`}
                 initial={{ y: "0" }}
                 animate={{ y: shouldShowNav ? "0" : "-10vh" }}
@@ -105,21 +134,15 @@ const Nav = () => {
                     animate="visible"
                 >
                         { menuHtml }
-                        <li><a href="https://drive.google.com/file/d/1RTMy8t8rwMLprahJVLvMNgUiZPwPk3oE/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a></li>
+                        <motion.li variants={navVariants}><a href="https://drive.google.com/file/d/1RTMy8t8rwMLprahJVLvMNgUiZPwPk3oE/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a></motion.li>
                 </motion.ul>
-            </motion.div>
-            <motion.nav className={navStyles.navStyle} animate={{ opacity: showNav }} initial={{ opacity: 0 }} transition={{ opacity: {duration: 0.3} }}>
-
-                <ul className={navStyles.mobileMenu}>
-                    { menuHtml }
-                    <li><a href="https://drive.google.com/file/d/1RTMy8t8rwMLprahJVLvMNgUiZPwPk3oE/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a></li>
-                </ul>
-
+            
                 
-            </motion.nav>
-            <div className={navStyles.navButton}>
-                { showNav ? <img alt="close button" className={navStyles.button} src={closeMenu} onClick={() => {handleClick("close")}} /> : <img alt="nav menu" className={navStyles.button} src={navMenu} onClick={() => {handleClick("open")}} />}
-            </div>
+            </motion.div>
+            }
+            
+            
+            
         </div>
     )
 }
