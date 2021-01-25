@@ -10,7 +10,7 @@ You can view the [Figma mockup here](https://www.figma.com/file/ZIOsxYKlsiSqAu5l
 
 
 > *Getting to the top is optional, getting down is mandatory*
-> Ed Viesturs
+> - Ed Viesturs
 
 ## 🚀 Start developing
 
