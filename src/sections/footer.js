@@ -25,7 +25,7 @@ const Footer = () => {
                 <div className={footerStyles.credits}>
                     <div>
                         <p>DESIGNED AND BUILT BY:</p>
-                        <a href="#"><b>Jean Tiston</b></a>
+                        <a href="https://github.com/jeantiston/viesturs-portfolio"><b>Jean Tiston</b></a>
                     </div>
                     <div>
                         <p> HERO PHOTO BY:</p>
