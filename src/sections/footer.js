@@ -21,18 +21,20 @@ const Footer = () => {
             <a href="https://www.instagram.com/jeloufish/" target="_blank" rel="noopener noreferrer"><img src={instagramIcon} alt="Instagram" className={footerStyles.footerIcon} /></a>
             <a href="https://twitter.com/jeanlouisedev" target="_blank" rel="noopener noreferrer"><img src={twitterIcon} alt="Twitter" className={footerStyles.footerIcon} /></a>
             </div> 
-            <div className={footerStyles.credits}>
-                <div>
-                    <p>Designed and built by:</p>
-                    <a href="#"><b>Jean Tiston</b></a>
-                </div>
-                <div>
-                    <p>Mountain photo by:</p>
-                    <a href="https://unsplash.com/@ingmarr"><b>Ingmar</b></a>
-                </div>
-                <div>
-                    <p>Icons made by:</p>
-                    <a href="https://www.flaticon.com/authors/freepik"><b>Freepik</b></a>
+            <div className={footerStyles.center}>
+                <div className={footerStyles.credits}>
+                    <div>
+                        <p>DESIGNED AND BUILT BY:</p>
+                        <a href="#"><b>Jean Tiston</b></a>
+                    </div>
+                    <div>
+                        <p> HERO PHOTO BY:</p>
+                        <a href="https://unsplash.com/@ingmarr"><b>Ingmar</b></a>
+                    </div>
+                    <div>
+                        <p>ICONS BY:</p>
+                        <a href="https://www.flaticon.com/authors/freepik"><b>Freepik</b></a>
+                    </div>
                 </div>
             </div>
 
