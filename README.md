@@ -7,8 +7,8 @@
 I designed and built this with Gatsby for my own portfolio which you can view at https://dev.jeanlouise.co/
 Used Framer Motion for the animation, Contentful for CMS and Netlify for deploying the project.
 
-You can view the Figma mockup below:
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FZIOsxYKlsiSqAu5lHeaHye%2FPortfolio%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+You can view the [Figma mockup here](https://www.figma.com/file/ZIOsxYKlsiSqAu5lHeaHye/Portfolio?node-id=0%3A1).
+
 
 > Getting to the top is optional, getting down is mandatory
 > - Ed Viesturs
