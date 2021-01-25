@@ -50,7 +50,13 @@ const Nav = () => {
     return <motion.li onClick={() => {handleClick("close")}}  variants={navVariants}><Link to={item.slug}>{item.title}</Link></motion.li>
     } )
 
-    const width = window.innerWidth;
+    const [width, setWidth ] = React.useState(768)
+
+    React.useEffect(() => {
+       setWidth(window.innerWidth);
+     }, []);
+
+    // const width = window.innerWidth;
     const breakpoint = 768;
 
     const [showNav, setShowNav] = React.useState(false)
