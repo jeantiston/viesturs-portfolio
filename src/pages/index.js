@@ -55,7 +55,7 @@ export default function Home() {
       function handleScroll() {
         // console.log(window.innerHeight)
         const yPos = window.scrollY;
-        const moonPos = yPos + (window.innerHeight * 50)/100
+        const moonPos = yPos + (window.innerHeight * 50)/100 +5
         // console.log(moonPos)
         
         if(moonPos >=  window.innerHeight){
@@ -75,7 +75,7 @@ export default function Home() {
   return (
   <Layout>
     <Head title="Jean Tiston | Software Engineer" />
-    <motion.div className={indexStyles.moon} animate={{ opacity: moonOpacity }} transition={{ opacity: {duration: 0.1} }}>
+    <motion.div className={indexStyles.moon} animate={{ opacity: moonOpacity }} transition={{ opacity: {duration: 0.05} }}>
       <Img className={indexStyles.moonBig} fixed={data.moon.childImageSharp.fixed} alt="moon"  />
       <Img  className={indexStyles.moonSmall} fixed={data.moon2.childImageSharp.fixed} alt="moon"  />
     </motion.div>
