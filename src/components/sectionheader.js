@@ -1,10 +1,12 @@
 import React from 'react'
 
+import Slide from 'react-reveal/Fade';
+
 const SectionHeader = ({ name }) => {
 
     const titleStyle = {
         fontFamily: "Raleway, sans-serif",
-        padding: "0px 0px 0px 10vw",
+        padding: "60px 0px 0px 10vw",
         margin: "30vh 5px 50px 5px",
         color: "#F3C2D8",
         width: "calc(90vw - 10px)",
@@ -14,7 +16,7 @@ const SectionHeader = ({ name }) => {
     }
 
     const wrapperStyle = {
-        margin: "40px 0px 20px"
+        margin: "0px 0px 20px"
     }
 
     const spanStyle = {
@@ -24,7 +26,9 @@ const SectionHeader = ({ name }) => {
 
     return (
         <div style={wrapperStyle}>
-            <h2 style={titleStyle}><span style={spanStyle}> { name } </span></h2>
+            <Slide right>
+                <h2 style={titleStyle}><span style={spanStyle}> { name } </span></h2>
+            </Slide>
         </div>
     )
 }
