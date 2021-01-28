@@ -6,6 +6,7 @@ import Img from "gatsby-image"
 
 import Layout from '@components/layout'
 import Head from '@components/head'
+import Loader from '@components/loader'
 import Hero from '@sections/hero'
 import About from '@sections/about'
 import Skills from '@sections/skills'
@@ -50,6 +51,7 @@ export default function Home() {
     `)
     
     const [moonOpacity, setMoonOpacity] = React.useState(1)
+    const [loaded, setLoaded]  = React.useState(false)
 
     React.useEffect(() => {
       function handleScroll() {
@@ -72,9 +74,14 @@ export default function Home() {
       }
     }, [])
 
+    const isLoaded = () => {
+      setLoaded(true)
+    }
+
   return (
   <Layout>
     <Head title="Jean Tiston | Software Engineer" />
+    <Loader loaded={loaded}/>
     <motion.div className={indexStyles.moon} animate={{ opacity: moonOpacity }} transition={{ opacity: {duration: 0.05} }}>
       <Img className={indexStyles.moonBig} fixed={data.moon.childImageSharp.fixed} alt="moon"  />
       <Img  className={indexStyles.moonSmall} fixed={data.moon2.childImageSharp.fixed} alt="moon"  />
@@ -82,7 +89,7 @@ export default function Home() {
     {/* <div>
     <Img id="mountain" src={data.mountain2.childImageSharp.fixed} alt="mountain" className={indexStyles.mountain} /> 
     </div> */}
-    <img id="mountain" src={data.mountain.publicURL} alt="mountain" className={indexStyles.mountain} /> 
+    <img id="mountain" onLoad={isLoaded} src={data.mountain.publicURL} alt="mountain" className={indexStyles.mountain} /> 
     <Hero />
     <div className={indexStyles.spacer} ></div>
     <About />

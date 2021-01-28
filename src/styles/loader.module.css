@@ -1,0 +1,10 @@
+.loader {
+    position: fixed;
+    z-index: 102;
+    /* border: 5px red solid; */
+    /* margin: 100px; */
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(118,86,133,1);
+    overflow-y: hidden;
+}
