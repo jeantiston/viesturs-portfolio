@@ -24,15 +24,15 @@ const Footer = () => {
             <div className={footerStyles.center}>
                 <div className={footerStyles.credits}>
                     <div>
-                        <p>DESIGNED AND BUILT BY:</p>
+                        <p>designed and built by:</p>
                         <a href="https://github.com/jeantiston/viesturs-portfolio"><b>Jean Tiston</b></a>
                     </div>
                     <div>
-                        <p> HERO PHOTO BY:</p>
+                        <p> hero photo by:</p>
                         <a href="https://unsplash.com/@ingmarr"><b>Ingmar</b></a>
                     </div>
                     <div>
-                        <p>ICONS BY:</p>
+                        <p>icons by:</p>
                         <a href="https://www.flaticon.com/authors/freepik"><b>Freepik</b></a>
                     </div>
                 </div>
