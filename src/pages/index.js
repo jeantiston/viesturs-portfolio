@@ -52,6 +52,7 @@ export default function Home() {
     
     const [moonOpacity, setMoonOpacity] = React.useState(1)
     const [loaded, setLoaded]  = React.useState(false)
+    const [startAnim, setStartAnim] = React.useState("");
 
     React.useEffect(() => {
       function handleScroll() {
@@ -76,6 +77,7 @@ export default function Home() {
 
     const isLoaded = () => {
       setLoaded(true)
+      setStartAnim("visible")
     }
 
   return (
@@ -90,7 +92,7 @@ export default function Home() {
     <Img id="mountain" src={data.mountain2.childImageSharp.fixed} alt="mountain" className={indexStyles.mountain} /> 
     </div> */}
     <img id="mountain" onLoad={isLoaded} src={data.mountain.publicURL} alt="mountain" className={indexStyles.mountain} /> 
-    <Hero />
+    <Hero start={startAnim} />
     <div className={indexStyles.spacer} ></div>
     <About />
     <Skills />

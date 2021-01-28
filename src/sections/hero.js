@@ -23,14 +23,14 @@ const heroVariants = {
     }
 }
 
-const Hero = () => {
+const Hero = (props) => {
 
     return (
         <div className={heroStyles.heroBg}>
             <motion.div className={heroStyles.hero}
                 variants={heroVariants}
                 initial="init"
-                animate="visible"
+                animate={props.start}
             >
                 <div className={heroStyles.moonWrapper}>
                 </div>
