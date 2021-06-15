@@ -75,7 +75,7 @@ export default function Home() {
   return (
   <Layout>
     <Head title="Jean Tiston | Software Engineer" />
-    <Loader loaded={loaded}/>
+    {/* <Loader loaded={loaded}/> */}
     <motion.div className={indexStyles.moon} animate={{ opacity: moonOpacity }} transition={{ opacity: {duration: 0.05} }}>
       <Img className={indexStyles.moonBig} fixed={data.moon.childImageSharp.fixed} alt="moon"  />
       <Img  className={indexStyles.moonSmall} fixed={data.moon2.childImageSharp.fixed} alt="moon"  />
