@@ -44,7 +44,7 @@ const Hero = (props) => {
                 <motion.div className={heroStyles.block}
                     variants={heroVariants}
                 >
-                    <p className={heroStyles.elevator}>I’m a software engineer based in Manila focusing on creating stunning and functional websites, user interfaces and content that clearly reflects your brand. </p>
+                    <p className={heroStyles.elevator}>I’m a web developer based in Manila focused on creating stunning and responsive websites and applications that would help your business and your brand. </p>
                 </motion.div>
                 <motion.div className={heroStyles.cta}
                     variants={heroVariants}
