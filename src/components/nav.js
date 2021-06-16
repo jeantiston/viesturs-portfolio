@@ -106,7 +106,7 @@ const Nav = () => {
             <motion.nav className={navStyles.navStyle} animate={{ opacity: showNav }} initial={{ opacity: 0 }} transition={{ opacity: {duration: 0.3} }}>
                 <ul className={navStyles.mobileMenu}>
                     { menuHtml }
-                    <li><a href="https://drive.google.com/file/d/1RTMy8t8rwMLprahJVLvMNgUiZPwPk3oE/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a></li>
+                    <li><a href="https://drive.google.com/file/d/1h-p7CVUE3XjDlM38Jwvqm3dHttU1n_vo/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a></li>
                 </ul>
                 
 
@@ -141,7 +141,7 @@ const Nav = () => {
                     animate="visible"
                 >
                         { menuHtml }
-                        <motion.li variants={navVariants}><a href="https://drive.google.com/file/d/1RTMy8t8rwMLprahJVLvMNgUiZPwPk3oE/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a></motion.li>
+                        <motion.li variants={navVariants}><a href="https://drive.google.com/file/d/1h-p7CVUE3XjDlM38Jwvqm3dHttU1n_vo/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a></motion.li>
                 </motion.ul>
             
                 

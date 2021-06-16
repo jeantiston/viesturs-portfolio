@@ -44,7 +44,7 @@ const Skills = () => {
             <div className={skillStyle.listlist}>
                 
                 { skillsHtml }
-                <a href="https://drive.google.com/file/d/1RTMy8t8rwMLprahJVLvMNgUiZPwPk3oE/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/file/d/1h-p7CVUE3XjDlM38Jwvqm3dHttU1n_vo/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                     <SkillsList title="View My Resume" skills={[]} icon={resumeIcon} />
                 </a>
             </div>
